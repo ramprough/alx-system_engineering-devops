@@ -12,8 +12,8 @@ def add_title(dictionary, hot_posts):
     title = hot_posts[0]['data']['title'].split()
     for word in title:
         for key in dictionary.keys():
-            i = re.compile("^{}$".format(key), re.I)
-            if i.findall(word):
+            c = re.compile("^{}$".format(key), re.I)
+            if c.findall(word):
                 dictionary[key] += 1
     hot_posts.pop(0)
     add_title(dictionary, hot_posts)
