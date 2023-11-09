@@ -3,6 +3,7 @@
    hot posts of a given Reddit subreddit
 """
 import requests
+import re
 
 
 def count_words(subreddit, word_list, instances={}, after="", count=0):
